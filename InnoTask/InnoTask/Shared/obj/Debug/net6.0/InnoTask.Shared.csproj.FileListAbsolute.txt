@@ -1,0 +1,15 @@
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\bin\Debug\net6.0\InnoTask.Shared.deps.json
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\bin\Debug\net6.0\InnoTask.Shared.dll
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\bin\Debug\net6.0\InnoTask.Shared.pdb
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.csproj.AssemblyReference.cache
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.Resourses.Resource_ar.resources
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.Resourses.Resource_en.resources
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.csproj.GenerateResource.cache
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.AssemblyInfoInputs.cache
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.AssemblyInfo.cs
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.dll
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\refint\InnoTask.Shared.dll
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\InnoTask.Shared.pdb
+C:\Users\Mo Dawoud\Desktop\InnoTask\InnoTask\Shared\obj\Debug\net6.0\ref\InnoTask.Shared.dll

@@ -1,0 +1,83 @@
+﻿@page "/logs"
+@namespace ThirdApp.Client
+@inject HttpClient _httpClient
+
+<h3>logger in</h3>
+
+<EditForm Model="Form" OnSubmit="OnFormSubmit">
+    <div class="mb-2">
+        <label for="typeDropdown">Select Type:</label>
+        <select id="typeDropdown" @bind="Form.Type">
+            <option value="info">Info</option>
+            <option value="warning">Warning</option>
+            <option value="exception">Exception</option>
+            <option value="error">Error</option>
+        </select>
+    </div>
+    <div class="mb-2">
+        <label for="dataInput">Enter Data:</label>
+        <InputText id="dataInput" @bind-Value="Form.data" placeholder="Enter data"></InputText>
+    </div>
+    <button type="submit">Save</button>
+</EditForm>
+
+<div class="mb-2">
+    <label for="filterTypeDropdown">Filter by Type:</label>
+    <select id="filterTypeDropdown" @bind="SelectedFilterType">
+        <option value="">All</option>
+        <option value="info">Info</option>
+        <option value="warning">Warning</option>
+        <option value="exception">Exception</option>
+        <option value="error">Error</option>
+    </select>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">@nameof(Form.Type)</th>
+            <th scope="col">@nameof(Form.data)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Form form in FilteredForms)
+        {
+            <tr>
+                <td>@form.Type</td>
+                <td>@form.data</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<Form> StudentForms { get; set; } = new List<Form>();
+    private Form Form { get; set; } = new Form();
+    private string SelectedFilterType { get; set; } = "";
+
+    private List<Form> FilteredForms
+    {
+        get
+        {
+            if (string.IsNullOrWhiteSpace(SelectedFilterType))
+                return StudentForms;
+
+            return StudentForms.Where(form => form.Type == SelectedFilterType).ToList();
+        }
+    }
+
+    protected async Task OnFormSubmit()
+    {
+        HttpResponseMessage response = await _httpClient.PostAsJsonAsync("api/Forms", Form);
+        if (response.IsSuccessStatusCode)
+        {
+            StudentForms.Add(Form);
+            Form = new Form();
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        StudentForms = await _httpClient.GetFromJsonAsync<List<Form>>("api/Forms");
+    }
+}

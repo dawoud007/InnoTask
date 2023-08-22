@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OYTO2Uj99Fr8itea8xaz0sauWzBqvnscnmg6If2LHJgWvZV3qZ2w163erauzhBOxsCtDrZUuNR5jb4bIe4ibUQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mo Dawoud\\Desktop\\InnoTask\\InnoTask\\Shared\\InnoTask.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mo Dawoud\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Mo Dawoud\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

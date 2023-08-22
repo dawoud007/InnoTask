@@ -1,0 +1,69 @@
+﻿@page "/student-form"
+
+@using InnoTask.Shared
+@using ThirdApp;
+@using System.Resources
+
+<h3>@GetLocalizedText("StudentFormTitle")</h3>
+
+<label for="languageDropdown">@GetLocalizedText("SelectLanguage")</label>
+<select id="languageDropdown" @onchange="ChangeLanguage">
+    <option value="en">عربي</option>
+    <option value="fr">Englis</option>
+</select>
+
+<hr />
+
+<form>
+    <div class="form-group">
+        <label>@GetLocalizedText("Id")</label>
+        <input type="number" class="form-control" @bind="student.Id" />
+    </div>
+    <div class="form-group">
+        <label>@GetLocalizedText("StudentName")</label>
+        <input type="text" class="form-control" @bind="student.StudentName" />
+    </div>
+    <div class="form-group">
+        <label>@GetLocalizedText("TotalGrads")</label>
+        <input type="number" class="form-control" @bind="student.TotalGrads" />
+    </div>
+    <div class="form-group">
+        <label>@GetLocalizedText("Level")</label>
+        <input type="number" class="form-control" @bind="student.Level" />
+    </div>
+    <div class="form-group">
+        <label>@GetLocalizedText("Age")</label>
+        <input type="number" class="form-control" @bind="student.Age" />
+    </div>
+
+    <button class="btn btn-primary" @onclick="Submit">Submit</button>
+</form>
+
+@code {
+    private Student student = new Student();
+    private string selectedLanguage = "en";
+    ResourceManager ar = new ResourceManager(typeof(InnoTask.Shared.Resourses.Resource_ar));
+    ResourceManager en = new ResourceManager(typeof(InnoTask.Shared.Resourses.Resource_en));
+
+    private void ChangeLanguage(ChangeEventArgs e)
+    {
+        selectedLanguage = e.Value.ToString();
+    }
+
+    private void Submit()
+    {
+        // Perform desired actions with the student object
+    }
+
+    private string GetLocalizedText(string key)
+    {
+        Console.WriteLine(key);
+
+        if (selectedLanguage == "en")
+        {
+
+            return ar.GetString(key, new System.Globalization.CultureInfo(selectedLanguage))!;
+        }
+        return en.GetString(key, new System.Globalization.CultureInfo(selectedLanguage))!;
+    }
+}
